@@ -13,11 +13,11 @@ options(digits=2)
 require(tidyverse)
 require(tigerstats)
 require(lubridate)
-kRdata <- read.csv(file = 'kRdata.csv')
-krdata$state<-as.factor(kRdata$state)
-kRdata$result<-as.factor(kRdata$result)
-kRdata$sex<-as.factor(kRdata$sex)
-kRdata$Sex<-as.factor(kRdata$Sex)
+kRdata <- read.csv(file = 'kRdata.csv')  
+kRdata$state<-as.factor(kRdata$state)  
+kRdata$result<-as.factor(kRdata$result)  
+kRdata$sex<-as.factor(kRdata$sex)  
+kRdata$Sex<-as.factor(kRdata$Sex)  
 
 ```
 
@@ -50,7 +50,8 @@ barchartGC(~result + Sex,data=kRdata)
 ```
 
 
-While observing the chart I can see their is a big difference of the dead and alive bar, which, there were more chances of survival than death and that more men have died from covid than women.
+
+While observing the chart I can see their is a big difference of the dead and alive bar, which, there were more chances of survival than death and that more men have died from covid than women.  
 
 
 ```{r}
@@ -58,7 +59,8 @@ barchartGC(~result + Sex,data=kRdata, type="percent")
 
 ```
 
- Observing the second chart we can see women had a more successful survival than men while the percentage of a women surviving is 55-56% and about 40% for men. Overall women had a more success with surviving covid while men had an unsuccessful chance.
+
+ Observing the second chart we can see women had a more successful survival than men while the percentage of a women surviving is 55-56% and about 40% for men. Overall women had a more success with surviving covid while men had an unsuccessful chance.  
 
 
 `
