@@ -58,6 +58,7 @@ barchartGC(~result + Sex,data=kRdata, type="percent")
 
 ```
 
+ Observing the second chart we can see women had a more successful survival than men while the percentage of a women surviving is 55-56% and about 40% for men. Overall women had a more success with surviving covid while men had an unsuccessful chance.
 
 
 `
