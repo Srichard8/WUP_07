@@ -78,11 +78,39 @@ barchartGC(~result + Sex,data=kRdata, type="percent")
   
 ## Numerical results
 
+```{r}
+table1 <- xtabs(~result + Sex, data=kRdata)
+rowPerc(table1)
+colPerc(table1)
+```
+
+ This result table shows us the correct percentages where at first we seen only the alive Female group was 56% and M was 44%. In the group titled "dead" F ranged at 36% and M ranged at 64%. A pretty big difference was shown. About 1.4 females were later deceased, while, only 3% males were deceased. Males in both charts and percentages ended up deceased double times the women.
+
 
 ## Inferential results 
+
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+```
+
+The chi sq test shows and provides almost the same amount between men and women's percentages. Each result (Null) and (Observed Counts) provides us with being merely close by comparing in the first results with Females being 1831 (Observant Counts) and 1817 (Expected by Null) shows a 14 % drop but still being in the 1800 range, then with Males it shows a close result between the null and observed counts with the null results resulting in 1411 and 1425 showing a close result.  
+()
+
+
+
+
+
+```{r}
+fisher.test(table1)
+```
+
+ The Fisher table shows a ration table between the odds of dying for males being (44/1411) and for females being (25/1831). The overall answer is divided coming into the answer of 2.3 being in the likely range of having the higher chance of dying. The confidence intervals are 1.4 to 3.9.
 
 
 
 
 ## Conclusions
 
+As reading into to all of the data we can see in Korea,Korean women had a higher chance in surviving covid than men as showing low percentages and ratios of men having a rating as high as 64 and 44. Men were represented as low survivors throughout every piece of data listed.
